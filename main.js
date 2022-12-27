@@ -29,7 +29,7 @@ class Reserva {
 function crearReserva () {
     let elegirHotel = document.getElementById ("#hotel").value;
     let elegirHabitacion = document.getElementById ("#habitacion").value;
-    let cantidadDepasajeros = document.getElementById ("#cantpasajos").value;
+    let cantidadDepasajeros = document.getElementById ("#cantpasajeros").value;
     let cantidadDeHabitaciones = document.getElementById ("#canthabitaciones").value;
     let fechaDeIngreso = document.getElementById ("#fechaingreso").value;
     let fechaDeEgreso = document.getElementById ("#fechaegreso").value;
@@ -57,6 +57,9 @@ function crearReserva () {
     }
 
     const nuevaReserva = new Reserva (elegirHotel, elegirHabitacion, cantidadDepasajeros, cantidadDeHabitaciones, fechaDeIngreso, fechaDeEgreso, tiempoEstadia, costoEstadia);
+    reservaNueva.push (nuevaReserva);
     console.log (nuevaReserva);
     return nuevaReserva;    
 }
+
+const reservas = JSON.parse (localStorage.getItem ("elegirHotel", "elegirHabitacion", "cantidadDepasajeros", "cantidadDeHabitaciones", "fechaDeIngreso", "fechaDeEgreso", "tiempoEstadia", "costoEstadia")) || [];
