@@ -27,12 +27,12 @@ class Reserva {
 } 
 
 function crearReserva () {
-    let elegirHotel = prompt ("Escriba el hotel que quiere seleccionar entre Down Town o Central Park");
-    let elegirHabitacion = prompt ("Escriba la habitacion que quiere seleccionar entre superior o delux");
-    let cantidadDepasajeros = prompt ("Escriba el tamaño de habitación que desea, doble, triple, cuadruple");
-    let cantidadDeHabitaciones = parseInt (prompt ("Escriba la cantidad de habitaciones que desea reservar"));
-    let fechaDeIngreso = parseInt (prompt ("Coloque la fecha en la que estará llegando al hotel"));
-    let fechaDeEgreso = parseInt (prompt ("Coloque la fecha en la que estará saliendo del hotel"));
+    let elegirHotel = document.getElementById ("#hotel").value;
+    let elegirHabitacion = document.getElementById ("#habitacion").value;
+    let cantidadDepasajeros = document.getElementById ("#cantpasajos").value;
+    let cantidadDeHabitaciones = document.getElementById ("#canthabitaciones").value;
+    let fechaDeIngreso = document.getElementById ("#fechaingreso").value;
+    let fechaDeEgreso = document.getElementById ("#fechaegreso").value;
     let tiempoEstadia = (fechaDeEgreso - fechaDeIngreso -1);
     let costoEstadia = (tiempoEstadia * 5500 * cantidadDeHabitaciones);
    
